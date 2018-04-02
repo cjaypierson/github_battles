@@ -16,6 +16,7 @@ function PlayerPreview (props) {
 				<button
 					className='reset'
 					onClick={props.onReset.bind(null, props.id)} >
+					Reset
 				</button>
 		</div>
 	)
@@ -112,6 +113,7 @@ class Battle extends React.Component {
 			var newState = {};
 			newState[id + 'Name'] = '';
 			newState[id + 'Image'] = null;
+			return newState;
 		})
 	}
 
