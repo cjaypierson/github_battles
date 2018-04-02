@@ -31,10 +31,12 @@ class Results extends React.Component {
 			}
 
 			this.setState(function () {
-				error: null,
-				winner: results[0],
-				loser: results[1],
-				loading: false
+				return {
+					error: null,
+					winner: results[0],
+					loser: results[1],
+					loading: false
+				}
 			})
 		}.bind(this));
 	}
@@ -56,7 +58,7 @@ class Results extends React.Component {
 			)
 		}
 		return (
-			<div> Results </div>
+			<div> {JSON.stringify(this.state, null, 2)} </div>
 		)
 	}
 }
